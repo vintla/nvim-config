@@ -1,6 +1,6 @@
 return {
   {
-    'luisiacc/gruvbox-baby'
+    'luisiacc/gruvbox-baby',
   },
   {
     'LazyVim/LazyVim',

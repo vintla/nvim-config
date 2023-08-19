@@ -9,7 +9,7 @@ return {
     local c = colors.config(configs)
     scrollbar.setup({
       handle = { color = c.blue_gray },
-      excluded_filetypes = { "prompt", "TelescopePrompt", "noice", "notify" },
+      excluded_filetypes = { "prompt", "TelescopePrompt", "noice", "notify", "neo-tree" },
       marks = {
         Search = { color = c.soft_yellow },
         Error = { color = c.error_red },
