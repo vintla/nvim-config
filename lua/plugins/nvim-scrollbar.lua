@@ -1,21 +1,23 @@
--- return {
---   "petertriho/nvim-scrollbar",
---   event = "BufReadPost",
---   enabled = true,
---   config = function()
---     local scrollbar = require("scrollbar")
---     local colors = require("tokyonight.colors").setup()
---     scrollbar.setup({
---       handle = { color = colors.bg_highlight },
---       excluded_filetypes = { "prompt", "TelescopePrompt", "noice", "notify" },
---       marks = {
---         Search = { color = colors.orange },
---         Error = { color = colors.error },
---         Warn = { color = colors.warning },
---         Info = { color = colors.info },
---         Hint = { color = colors.hint },
---         Misc = { color = colors.purple },
---       },
---     })
---   end,
--- }
+return {
+  "petertriho/nvim-scrollbar",
+  event = "VeryLazy",
+  enabled = true,
+  config = function()
+    local scrollbar = require("scrollbar")
+    local configs = require("gruvbox-baby.config")
+    local colors = require("gruvbox-baby.colors")
+    local c = colors.config(configs)
+    scrollbar.setup({
+      handle = { color = c.blue_gray },
+      excluded_filetypes = { "prompt", "TelescopePrompt", "noice", "notify" },
+      marks = {
+        Search = { color = c.soft_yellow },
+        Error = { color = c.error_red },
+        Warn = { color = c.orange },
+        Info = { color = c.bright_yellow },
+        Hint = { color = c.light_blue },
+        Misc = { color = c.magenta },
+      },
+    })
+  end,
+}
