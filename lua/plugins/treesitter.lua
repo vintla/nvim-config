@@ -11,11 +11,13 @@ return {
 
         --install Dart parser
         "dart",
+        "php",
+        "python",
       },
       indent = {
         enable = true,
-        disable = { 'dart' }
-      }
+        disable = { "dart" },
+      },
     }
   end,
 }

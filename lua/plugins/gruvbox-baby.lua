@@ -1,11 +1,11 @@
 return {
   {
-    'luisiacc/gruvbox-baby',
+    "luisiacc/gruvbox-baby",
   },
   {
-    'LazyVim/LazyVim',
+    "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox-baby"
-    }
-  }
+      colorscheme = "gruvbox-baby",
+    },
+  },
 }

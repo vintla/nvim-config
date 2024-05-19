@@ -1,12 +1,13 @@
 return {
-  "jose-elias-alvarez/null-ls.nvim",
-  opts = function()
+  "nvimtools/none-ls.nvim",
+  config = function()
     local nls = require("null-ls")
-    return {
+
+    nls.setup({
       sources = {
-        nls.builtins.formatting.dart_format,
-        
+        nls.builtins.code_actions.dart_format,
+        nls.builtins.diagnostics.dart_format,
       },
-    }
+    })
   end,
 }
