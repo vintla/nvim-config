@@ -13,7 +13,7 @@ return {
         "dart",
         "php",
         "python",
-        "r",
+        "sql",
       },
       indent = {
         enable = true,

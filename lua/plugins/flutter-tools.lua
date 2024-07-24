@@ -61,7 +61,7 @@ return {
             }
 
             --
-            -- require("dap.ext.vscode").load_launchjs()
+            require("dap.ext.vscode").load_launchjs()
           end,
         },
         dev_log = {

@@ -26,6 +26,5 @@ local opts = function()
   })
 end
 return {
-  "mfussenegger/nvim-dap",
-  opts = opts,
+  { "mfussenegger/nvim-dap", opts = opts },
 }

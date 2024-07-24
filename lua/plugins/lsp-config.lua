@@ -11,4 +11,34 @@ return {
       desc = "Flutter range code action",
     }
   end,
+  -- servers = {
+  --
+  --   settings = {
+  --     sql = {
+  --       mason = true,
+  --     },
+  --     completion = {
+  --       callSnippet = "Replace",
+  --     },
+  --   },
+  -- },
+  -- setup = {
+  --   sqls = function()
+  --     require("lspconfig").sqls.setup({
+  --       on_attach = function(client, bufnr)
+  --         require("sqls").on_attach(client, bufnr)
+  --       end,
+  --       settings = {
+  --         sqls = {
+  --           connections = {
+  --             {
+  --               driver = "mysql",
+  --               dataSource = "mysql://phpmyadmin:alvin_ferdian@tcp(127.0.0.1:3306)/mysql?sslmode=disable",
+  --             },
+  --           },
+  --         },
+  --       },
+  --     })
+  --   end,
+  -- },
 }
