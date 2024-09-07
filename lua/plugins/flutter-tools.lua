@@ -6,6 +6,7 @@ return {
     config = function()
       local line = { "🭽", "▔", "🭾", "▕", "🭿", "▁", "🭼", "▏" }
       require("flutter-tools").setup({
+        flutter_path = "/home/alvinferdianakbar/Development/flutter/bin/flutter",
         ui = {
           border = line,
           notification_style = "plugin",
@@ -29,14 +30,14 @@ return {
           register_configurations = function(_)
             require("dap").adapters.dart = {
               type = "executable",
-              command = vim.fn.stdpath("data") .. "/mason/bin/dart-debug-adapter",
-              args = { "dart" },
+              command = "dart",
+              args = { "debug_adapter" },
             }
 
             require("dap").adapters.flutter = {
               type = "executable",
-              command = vim.fn.stdpath("data") .. "/mason/bin/dart-debug-adapter",
-              args = { "flutter" },
+              command = "flutter",
+              args = { "debug_adapter" },
             }
             --
             require("dap").configurations.dart = {
@@ -59,8 +60,6 @@ return {
                 cwd = "${workspaceFolder}",
               },
             }
-
-            --
             require("dap.ext.vscode").load_launchjs()
           end,
         },
@@ -69,8 +68,8 @@ return {
           open_cmd = "tabedit",
         },
         lsp = {
-
           -- on_attach = require("lazyvim.plugins.lsp.init").on_attach,
+          -- capabilities = require("lazyvim.plugins.lsp.init").capabilities,
           color = {
             enabled = true,
             background = false,
@@ -83,6 +82,7 @@ return {
             showTodos = true,
             completeFunctionCalls = true,
             renameFilesWithClasses = "prompt",
+            updateImportsOnRename = true,
             enableSnippets = true,
             enableSdkFormatter = true,
             analysisExcludedFolders = {

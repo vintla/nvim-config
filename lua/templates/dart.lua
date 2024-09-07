@@ -51,12 +51,12 @@ import 'package:equatable/equatable.dart';
 part ']] .. vim.split(filename, "_bloc.dart")[1] .. [[_event.dart';
 part ']] .. vim.split(filename, "_bloc.dart")[1] .. [[_state.dart';
 
-class ]] .. get_class_name(filename) .. [[extends Bloc<]] .. vim.split(get_class_name(filename), "Bloc")[1] .. [[Event, ]] .. vim.split(
+class ]] .. get_class_name(filename) .. [[ extends Bloc<]] .. vim.split(get_class_name(filename), "Blocs")[1] .. [[Events, ]] .. vim.split(
     get_class_name(filename),
-    "Bloc"
+    "Blocs"
   )[1] .. [[State> {
-  ]] .. get_class_name(filename) .. [[]() : super(]] .. vim.split(get_class_name(filename), "Bloc")[1] .. [[Initial()) {
-    on<]] .. vim.split(get_class_name(filename), "Bloc")[1] .. [[Event>((event, emit) {
+  ]] .. get_class_name(filename) .. [[() : super(]] .. vim.split(get_class_name(filename), "Blocs")[1] .. [[Initial()) {
+    on<]] .. vim.split(get_class_name(filename), "Blocs")[1] .. [[Events>((event, emit) {
       // TODO: implement event handler
       |cursor|
     });

@@ -6,3 +6,5 @@ vim.opt.winbar = "%=%m %f"
 vim.lsp.buf.format({ timeout_ms = 5000 })
 -- reload current color scheme to pick up colors override if it was set up in a lazy plugin definition fashion
 vim.cmd.colorscheme(vim.g.colors_name)
+
+vim.g.lazyvim_php_lsp = "intelephense"
